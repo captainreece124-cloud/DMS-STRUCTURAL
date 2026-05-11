@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+:root {
+  --primary:       #0052CC;
+  --primary-dark:  #003d99;
+  --accent:        #F59E0B;
+  --accent-dark:   #d97706;
+  --bg:            #0f1b3c;
+  --bg-surface:    #0d1830;
+  --bg-elevated:   #1a2f5a;
+  --text:          #f5f4ef;
+  --text-muted:    #8892a4;
+  --border:        rgba(0, 82, 204, 0.3);
+  --shadow:        0 4px 24px rgba(0, 82, 204, 0.25);
+  --radius:        12px;
+  --nav-h:         72px;
+  --white:         #ffffff;
+  --wa-green:      #10B981;
+  --wa-green-dark: #059669;
+  --error:         #e53e3e;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+address { font-style: normal; }
+
+/* Blueprint SVG stroke classes */
+.bp-anim { fill: none; }
+.bp-primary { stroke: var(--primary); }
+.bp-accent  { stroke: var(--accent); }
+.bp-ann     { stroke: var(--primary); opacity: 0.45; }
+.bp-dim     { stroke: var(--primary); opacity: 0.3; }
+.bp-muted   { stroke: var(--text-muted); opacity: 0.25; }
+.bp-dash    { stroke-dasharray: 5 3; }
+.bp-text    { fill: var(--text-muted); font-family: 'Poppins', monospace; }
+
+/* WhatsApp pulse */
+@keyframes wa-pulse {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.1); }
+}
+
+/* Stat text clip reveal */
+.stat-text {
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.stat-text.revealed {
+  clip-path: inset(0 0% 0 0);
+}
+
+/* Nav underline hover */
+.nav-link {
+  position: relative;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  transition: color 0.2s ease;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0; right: 0;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+}
+.nav-link:hover { color: var(--text); }
+.nav-link:hover::after { transform: scaleX(1); }
