@@ -16,8 +16,8 @@ export default function App() {
       <main>
         <div className="hero-bg">
           <Hero />
-          <BeforeAfterSlider />
         </div>
+        <BeforeAfterSlider />
         <Services />
         <About />
         <Team />
