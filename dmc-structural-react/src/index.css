@@ -87,3 +87,74 @@ address { font-style: normal; }
 }
 .nav-link:hover { color: var(--text); }
 .nav-link:hover::after { transform: scaleX(1); }
+
+/* ============================================================
+   MOBILE OPTIMISATIONS — max-width: 768px
+   Desktop layouts (769px+) are untouched.
+   ============================================================ */
+
+/* Hero service pills: desktop default — horizontal scroll */
+.hero-pills {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+
+  /* Slightly smaller nav bar */
+  :root {
+    --nav-h: 60px;
+  }
+
+  /* Nav logo text */
+  .nav-logo-title {
+    font-size: 26px !important;
+    letter-spacing: 2px !important;
+  }
+
+  /* Hero content wrapper */
+  .hero-content {
+    padding: 48px 18px !important;
+    gap: 20px !important;
+  }
+
+  /* Hero H1 */
+  .hero-h1 {
+    font-size: 36px !important;
+  }
+
+  /* Hero subtext */
+  .hero-sub {
+    font-size: 14px !important;
+  }
+
+  /* Service pills: wrap naturally, no horizontal scroll */
+  .hero-pills {
+    flex-wrap: wrap !important;
+    overflow-x: visible !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* CTA buttons: stack full-width */
+  .hero-cta {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  .hero-cta > a {
+    width: 100% !important;
+    justify-content: center !important;
+    font-size: 14px !important;
+    padding: 12px 20px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Section vertical padding: 96px → 64px */
+  .section-padded {
+    padding: 64px 0 !important;
+  }
+
+  /* Section header bottom margin: 64px → 40px */
+  .section-header {
+    margin-bottom: 40px !important;
+  }
+}

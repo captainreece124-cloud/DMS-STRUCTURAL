@@ -27,7 +27,7 @@ export default function Hero() {
         margin: '0 auto', padding: '80px 24px',
         display: 'flex', flexDirection: 'column', gap: 28,
         alignItems: 'flex-start',
-      }} className="sm:items-start md:px-12">
+      }} className="sm:items-start md:px-12 hero-content">
 
         <motion.p {...fade(0.2)}
           style={{ fontSize: 12, fontWeight: 500, letterSpacing: 3, color: 'var(--accent)' }}>
@@ -35,6 +35,7 @@ export default function Hero() {
         </motion.p>
 
         <motion.h1 {...fade(0.4)}
+          className="hero-h1"
           style={{
             fontFamily: "'Bebas Neue', cursive",
             fontSize: 'clamp(48px, 9vw, 88px)',
@@ -45,15 +46,15 @@ export default function Hero() {
 
         <motion.p {...fade(0.6)}
           style={{ fontSize: 16, lineHeight: 1.8, color: 'rgba(232,234,240,0.88)', maxWidth: 580 }}
-          className="md:text-[18px]">
+          className="hero-sub md:text-[18px]">
           From rooftops to foundations — DMC delivers industrial-grade roofing, waterproofing, structural repairs, and protective coatings for commercial and industrial properties across KwaZulu-Natal.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.8, ease: 'easeOut' }}
-          style={{ display: 'flex', flexWrap: 'nowrap', gap: 10, overflowX: 'auto', paddingBottom: 4 }}
-          className="md:flex-wrap">
+          style={{ display: 'flex', gap: 10, paddingBottom: 4 }}
+          className="hero-pills">
           {pills.map((p, i) => (
             <motion.span key={p}
               initial={{ opacity: 0, x: -20 }}
@@ -74,7 +75,8 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 1.0 }}
-          style={{ display: 'flex', flexWrap: 'wrap', gap: 16 }}>
+          style={{ display: 'flex', flexWrap: 'wrap', gap: 16 }}
+          className="hero-cta">
           <a href="https://wa.me/27718760406?text=Hi%20DMC%2C%20I%27d%20like%20to%20enquire%20about%20your%20services."
             target="_blank" rel="noopener noreferrer"
             style={{

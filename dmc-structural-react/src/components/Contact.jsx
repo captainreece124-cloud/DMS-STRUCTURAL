@@ -55,7 +55,7 @@ export default function Contact() {
   })
 
   return (
-    <section id="contact" style={{ padding: '96px 0', background: 'var(--bg-surface)' }}>
+    <section id="contact" className="section-padded" style={{ padding: '96px 0', background: 'var(--bg-surface)' }}>
       <div style={{ width: '100%', maxWidth: 1280, margin: '0 auto', padding: '0 24px' }} className="xl:px-12">
         <div style={{ display: 'grid', gap: 64 }} className="md:grid-cols-2 md:items-start md:gap-16">
 

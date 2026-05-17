@@ -12,7 +12,7 @@ const features = [
 
 export default function About() {
   return (
-    <section id="about" style={{ padding: '96px 0', background: 'var(--bg-surface)' }}>
+    <section id="about" className="section-padded" style={{ padding: '96px 0', background: 'var(--bg-surface)' }}>
       <div style={{ width: '100%', maxWidth: 1280, margin: '0 auto', padding: '0 24px' }} className="xl:px-12">
         <div style={{ display: 'grid', gap: 64 }} className="md:grid-cols-2 md:gap-[80px] md:items-center">
 

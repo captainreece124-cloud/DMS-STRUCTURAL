@@ -23,7 +23,7 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="process" style={{ padding: '96px 0', background: 'var(--bg)' }}>
+    <section id="process" className="section-padded" style={{ padding: '96px 0', background: 'var(--bg)' }}>
       <div style={{ width: '100%', maxWidth: 1280, margin: '0 auto', padding: '0 24px' }} className="xl:px-12">
 
         <motion.div
@@ -31,6 +31,7 @@ export default function Process() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.7 }}
+          className="section-header"
           style={{ textAlign: 'center', marginBottom: 64 }}>
           <h2 style={{ fontFamily: "'Bebas Neue', cursive", fontSize: 'clamp(40px,6vw,64px)', color: 'var(--text)', letterSpacing: 2, lineHeight: 1, marginBottom: 16 }}>
             HOW WE WORK

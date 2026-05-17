@@ -38,7 +38,7 @@ export default function Navbar() {
       }}>
         <a href="#" aria-label="DMC Structural Rehabilitation home"
           style={{ display: 'flex', flexDirection: 'column', lineHeight: 1 }}>
-          <span style={{ fontFamily: "'Bebas Neue', cursive", fontSize: 32, color: 'var(--accent)', letterSpacing: 3 }}>DMC</span>
+          <span className="nav-logo-title" style={{ fontFamily: "'Bebas Neue', cursive", fontSize: 32, color: 'var(--accent)', letterSpacing: 3 }}>DMC</span>
           <span style={{ fontFamily: 'Poppins', fontSize: 9, fontWeight: 500, color: 'var(--text-muted)', letterSpacing: 2, marginTop: 2 }}>STRUCTURAL REHAB</span>
         </a>
 
