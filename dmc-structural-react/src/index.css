@@ -171,5 +171,6 @@ address { font-style: normal; }
 @media (max-width: 1024px) {
   .hero-bg {
     background-attachment: scroll;
+    background-position: top center;
   }
 }
