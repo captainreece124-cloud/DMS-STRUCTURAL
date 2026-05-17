@@ -14,14 +14,7 @@ export default function App() {
     <>
       <Navbar />
       <main>
-        <div style={{
-          backgroundImage: 'url(/hero-background.jpg)',
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-          backgroundAttachment: 'fixed',
-          backgroundPosition: 'center',
-          position: 'relative',
-        }}>
+        <div className="hero-bg">
           <Hero />
           <BeforeAfterSlider />
         </div>

@@ -34,7 +34,7 @@ export default function Team() {
           transition={{ duration: 0.7, delay: 0.2 }}
           style={{ maxWidth: 1200, margin: '0 auto 48px' }}>
           <img
-            src="/team-photo.jpg"
+            src="/IMG-20260510-WA0026.jpg"
             alt="DMC Structural Rehabilitation team"
             style={{
               width: '100%',

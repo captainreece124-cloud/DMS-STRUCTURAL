@@ -158,3 +158,18 @@ address { font-style: normal; }
     margin-bottom: 40px !important;
   }
 }
+
+.hero-bg {
+  background-image: url(/hero-background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative;
+}
+
+@media (max-width: 1024px) {
+  .hero-bg {
+    background-attachment: scroll;
+  }
+}
