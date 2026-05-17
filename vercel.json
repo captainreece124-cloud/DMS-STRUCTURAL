@@ -1,5 +1,6 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "framework": null
+  "buildCommand": "cd dmc-structural-react && npm install && npm run build",
+  "outputDirectory": "dmc-structural-react/dist",
+  "framework": null,
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
